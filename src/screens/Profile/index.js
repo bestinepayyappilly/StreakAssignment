@@ -1,18 +1,33 @@
-import React from 'react';
-import {StyleSheet, Text, View, ScrollView, StatusBar} from 'react-native';
-import {Header1, Hairline, CrossButton} from '../../components';
+import React, {useState} from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  StatusBar,
+  PixelRatio,
+  Dimensions,
+  Pressable,
+} from 'react-native';
+import {Header1, Hairline, CrossButton, SubmitButton1} from '../../components';
 import TextInput1 from '../../components/molecules/TextInput1';
 import {colors, fonts} from '../../constants';
 
+const {height, width} = Dimensions.get('screen');
+const windowHeight = Dimensions.get('window').height;
+const navBarHeight = height - windowHeight + StatusBar.currentHeight;
+
 const index = ({navigation}) => {
+  const [firstName, setFirstName] = useState(null);
+  const [secondName, setSecondName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [number, setNumber] = useState(null);
+
   return (
     <View style={styles.container}>
-      <StatusBar
-        translucent
-        backgroundColor="transparent"
-        barStyle="dark-content"
-      />
-      <ScrollView style={styles.scrollViewContainer}>
+      <ScrollView
+        style={styles.scrollViewContainer}
+        showsVerticalScrollIndicator={false}>
         <Header1 />
         <View style={styles.crossButtonContainer}>
           <CrossButton
@@ -23,17 +38,34 @@ const index = ({navigation}) => {
         </View>
         <View style={styles.instructionContainer}>
           <Text style={styles.instructionStyle}>
-            Enter your details so we can {'\n'} get to know you better.
+            Enter your details so we can {'\n'}get to know you better.
           </Text>
         </View>
         <Hairline />
-        <View style={{marginVertical: 18}}>
-          <TextInput1 label="First Name" />
+        <View style={{marginTop: 18}}>
+          <TextInput1
+            label="First Name"
+            value={firstName}
+            onChangeText={text => {
+              setFirstName(text);
+            }}
+          />
           <TextInput1 label="Second Name" />
           <TextInput1 label="Email" />
-          <TextInput1 />
+          <TextInput1 label="Mobile Number" keyboardType="numeric" />
+        </View>
+        <View style={{marginTop: 8, alignItems: 'center'}}>
+          <Text
+            style={{
+              fontFamily: fonts.IBM_Medium,
+              fontSize: 16,
+              color: colors.GreyLight,
+            }}>
+            OTP verification in next step
+          </Text>
         </View>
       </ScrollView>
+      <SubmitButton1 />
     </View>
   );
 };
@@ -47,7 +79,8 @@ const styles = StyleSheet.create({
   },
   scrollViewContainer: {
     marginTop: StatusBar.currentHeight,
-    flex: 1,
+    height: height - 86,
+    width: width,
     backgroundColor: colors.white,
   },
   instructionStyle: {

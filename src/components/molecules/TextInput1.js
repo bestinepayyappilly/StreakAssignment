@@ -3,7 +3,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import {Input} from 'react-native-elements';
 import {colors, fonts} from '../../constants';
 
-const TextInput1 = ({label}) => {
+const TextInput1 = ({label, onChangeText, keyboardType, value, onChange}) => {
   return (
     <View
       style={{
@@ -23,14 +23,17 @@ const TextInput1 = ({label}) => {
       </Text>
       <View style={{marginTop: 12}}>
         <Input
+          onChange={onChange}
+          value={value}
+          onChangeText={onChangeText}
+          keyboardType={keyboardType ? keyboardType : 'default'}
           placeholder="Jhon"
-          placeholderTextColor={colors.placeHolder}
+          placeholderTextColor={colors.border1}
           inputStyle={{
             fontFamily: fonts.IBM_Medium,
             fontSize: 18,
             lineHeight: 24,
             textAlign: 'left',
-            opacity: 0.28,
           }}
           containerStyle={{
             borderWidth: 2,
