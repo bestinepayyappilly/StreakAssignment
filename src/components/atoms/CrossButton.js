@@ -11,9 +11,10 @@ const CrossButton = ({onPress}) => {
         height: 40,
         width: 40,
         backgroundColor: '#fff',
-        elevation: 5,
+        elevation: 20,
         padding: 12,
         borderRadius: 20,
+        shadowColor: '#000',
       }}>
       <Image source={cross} style={{height: '100%', width: '100%'}} />
     </Pressable>

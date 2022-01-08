@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View, ScrollView, StatusBar} from 'react-native';
 import {Header1, Hairline, CrossButton} from '../../components';
+import TextInput1 from '../../components/molecules/TextInput1';
 import {colors, fonts} from '../../constants';
 
 const index = ({navigation}) => {
@@ -26,6 +27,12 @@ const index = ({navigation}) => {
           </Text>
         </View>
         <Hairline />
+        <View style={{marginVertical: 18}}>
+          <TextInput1 label="First Name" />
+          <TextInput1 label="Second Name" />
+          <TextInput1 label="Email" />
+          <TextInput1 />
+        </View>
       </ScrollView>
     </View>
   );
@@ -36,12 +43,12 @@ export default index;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: colors.white,
   },
   scrollViewContainer: {
     marginTop: StatusBar.currentHeight,
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: colors.white,
   },
   instructionStyle: {
     color: colors.GreyLight,
