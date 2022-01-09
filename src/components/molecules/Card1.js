@@ -67,7 +67,7 @@ const Card1 = () => {
                       shadowColor: 'rgba(0, 0, 0, 1)',
                       shadowRadius: 2,
                       borderRadius: 30,
-                      backgroundColor: 'rgba(155, 151, 182, 0.5)',
+                      backgroundColor: 'rgba(155, 151, 182, 0.1)',
                       width: 43.2,
                       height: 43.2,
                       alignItems: 'center',
@@ -76,7 +76,7 @@ const Card1 = () => {
                     <Image
                       source={EyeIcon}
                       resizeMode="contain"
-                      style={{height: 24.19, width: 26.2, marginTop: 5}}
+                      style={{height: 24.19, width: 26.2, marginTop: 3}}
                     />
                   </Shadow>
                 </Pressable>

@@ -6,4 +6,6 @@ export {default as Card1} from './molecules/Card1';
 export {default as UtilsButton} from './atoms/UtilsButton';
 export {default as ScanButton} from './atoms/ScanButton';
 export {default as UtilsButton2} from './atoms/UtilsButton2';
-export {default as TransactionsCard} from './molecules/TransactionsCard';
+export {default as TransactionsCard} from './organisms/TransactionsCard';
+export {default as SavingsCard} from './organisms/SavingsCard';
+export {default as GameOfTheDayCard} from './organisms/GameOfTheDayCard';
