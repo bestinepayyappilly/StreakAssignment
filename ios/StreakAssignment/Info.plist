@@ -67,6 +67,54 @@
 		<string>IBMPlexSans-SemiBoldItalic.ttf</string>
 		<string>IBMPlexSans-Thin.ttf</string>
 		<string>IBMPlexSans-ThinItalic.ttf</string>
+		<string>Barlow-Black.ttf</string>
+		<string>Barlow-BlackItalic.ttf</string>
+		<string>Barlow-Bold.ttf</string>
+		<string>Barlow-BoldItalic.ttf</string>
+		<string>Barlow-ExtraBold.ttf</string>
+		<string>Barlow-ExtraBoldItalic.ttf</string>
+		<string>Barlow-ExtraLight.ttf</string>
+		<string>Barlow-ExtraLightItalic.ttf</string>
+		<string>Barlow-Italic.ttf</string>
+		<string>Barlow-Light.ttf</string>
+		<string>Barlow-LightItalic.ttf</string>
+		<string>Barlow-Medium.ttf</string>
+		<string>Barlow-MediumItalic.ttf</string>
+		<string>Barlow-Regular.ttf</string>
+		<string>Barlow-SemiBold.ttf</string>
+		<string>Barlow-SemiBoldItalic.ttf</string>
+		<string>Barlow-Thin.ttf</string>
+		<string>Barlow-ThinItalic.ttf</string>
+		<string>IBMPlexMono-Bold.ttf</string>
+		<string>IBMPlexMono-BoldItalic.ttf</string>
+		<string>IBMPlexMono-ExtraLight.ttf</string>
+		<string>IBMPlexMono-ExtraLightItalic.ttf</string>
+		<string>IBMPlexMono-Italic.ttf</string>
+		<string>IBMPlexMono-Light.ttf</string>
+		<string>IBMPlexMono-LightItalic.ttf</string>
+		<string>IBMPlexMono-Medium.ttf</string>
+		<string>IBMPlexMono-MediumItalic.ttf</string>
+		<string>IBMPlexMono-Regular.ttf</string>
+		<string>IBMPlexMono-SemiBold.ttf</string>
+		<string>IBMPlexMono-SemiBoldItalic.ttf</string>
+		<string>IBMPlexMono-Thin.ttf</string>
+		<string>IBMPlexMono-ThinItalic.ttf</string>
+		<string>AntDesign.ttf</string>
+		<string>Entypo.ttf</string>
+		<string>EvilIcons.ttf</string>
+		<string>Feather.ttf</string>
+		<string>FontAwesome.ttf</string>
+		<string>FontAwesome5_Brands.ttf</string>
+		<string>FontAwesome5_Regular.ttf</string>
+		<string>FontAwesome5_Solid.ttf</string>
+		<string>Fontisto.ttf</string>
+		<string>Foundation.ttf</string>
+		<string>Ionicons.ttf</string>
+		<string>MaterialCommunityIcons.ttf</string>
+		<string>MaterialIcons.ttf</string>
+		<string>Octicons.ttf</string>
+		<string>SimpleLineIcons.ttf</string>
+		<string>Zocial.ttf</string>
 	</array>
 </dict>
 </plist>
