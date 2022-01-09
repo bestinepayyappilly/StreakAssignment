@@ -13,7 +13,6 @@ const GameOfTheDayCard = () => {
     null;
   } else {
     const [x, y, z, w] = number;
-    console.log(x, y, z, w);
   }
   const getNumbers = async () => {
     await axios
@@ -59,34 +58,34 @@ const GameOfTheDayCard = () => {
                   key={e}
                   style={{
                     borderWidth: 6,
-
                     borderRadius: 7.19,
                     borderColor: 'rgba(218, 155, 124, 0.3)',
-                    height: 94,
+                    flex: 1,
+                    marginHorizontal: 5,
+                    justifyContent: 'center',
                   }}>
                   <LinearGradient
-                    style={{padding: 10}}
                     colors={[
-                      'rgba(146, 90, 37, 0.2)',
-                      'rgba(146, 90, 37, 0.2)',
-                      'rgba(150, 95, 38, 0.2)',
-                      // 'rgba(162, 109, 41, 0.2)',
-                      // 'rgba(183, 134, 45, 0.2)',
-                      // 'rgba(211, 167, 50, 0.2)',
-                      // 'rgba(207, 162, 49, 0.2)',
-                      // 'rgba(189, 138, 45, 0.2)',
-                      // 'rgba(178, 123, 43, 0.2)',
-                      // 'rgba(171, 115, 42, 0.2)',
-                      // 'rgba(169, 112, 41, 0.2)',
-                      // 'rgba(178, 124, 49, 0.2)',
-                      // 'rgba(201, 160, 79, 0.2)',
-                      // 'rgba(248, 227, 140, 0.2)',
-                      // 'rgba(223, 194, 113, 0.2)',
-                      // 'rgba(177, 129, 57, 0.2)',
-                      // 'rgba(157, 103, 40, 0.2)',
-                      // 'rgba(153, 98, 40, 0.2)',
-                      // 'rgba(141, 84, 42, 0.2)',
-                      // 'rgba(129, 70, 43, 0.2)',
+                      //   'rgba(146, 90, 37, 0.2)',
+                      //   'rgba(146, 90, 37, 0.2)',
+                      //   'rgba(150, 95, 38, 0.2)',
+                      //   'rgba(162, 109, 41, 0.2)',
+                      //   'rgba(183, 134, 45, 0.2)',
+                      //   'rgba(211, 167, 50, 0.2)',
+                      //   'rgba(207, 162, 49, 0.2)',
+                      //   'rgba(189, 138, 45, 0.2)',
+                      //   'rgba(178, 123, 43, 0.2)',
+                      //   'rgba(171, 115, 42, 0.2)',
+                      //   'rgba(169, 112, 41, 0.2)',
+                      //   'rgba(178, 124, 49, 0.2)',
+                      //   'rgba(201, 160, 79, 0.2)',
+                      //   'rgba(248, 227, 140, 0.2)',
+                      //   'rgba(223, 194, 113, 0.2)',
+                      //   'rgba(177, 129, 57, 0.2)',
+                      //   'rgba(157, 103, 40, 0.2)',
+                      'rgba(153, 98, 40, 0.2)',
+                      'rgba(141, 84, 42, 0.2)',
+                      'rgba(129, 70, 43, 0.2)',
                     ]}>
                     {/* <ScrollView
                       showsVerticalScrollIndicator={false}
@@ -97,15 +96,23 @@ const GameOfTheDayCard = () => {
                       contentContainerStyle={{alignItems: 'center'}}>
                       {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(e => {
                         return ( */}
-                    <Text
-                      key={e}
+                    <View
                       style={{
-                        fontSize: 60,
-                        fontFamily: fonts.Barlow_SemiBold,
-                        color: 'rgba(99, 30, 0, 1)',
+                        alignSelf: 'center',
+                        marginHorizontal: 10,
+                        alignItems: 'center',
+                        justifyContent: 'center',
                       }}>
-                      {e}
-                    </Text>
+                      <Text
+                        key={e}
+                        style={{
+                          fontSize: 60,
+                          fontFamily: fonts.Barlow_SemiBold,
+                          color: 'rgba(99, 30, 0, 1)',
+                        }}>
+                        {e}
+                      </Text>
+                    </View>
                     {/* );
                       })}
                     </ScrollView> */}

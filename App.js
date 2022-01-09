@@ -1,14 +1,14 @@
 import React from 'react';
-import {StatusBar, StyleSheet, Text, View} from 'react-native';
-import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
-import {DashBoard, Profile} from './src/screens';
 import Navigator from './src/Navigator';
-
+import {Provider} from 'react-redux';
+import configureStore from './src/_Redux/store/configureStore';
+const store = configureStore();
 const App = () => {
-  return <Navigator />;
+  return (
+    <Provider store={store}>
+      <Navigator />
+    </Provider>
+  );
 };
 
 export default App;
-
-const styles = StyleSheet.create({});

@@ -1,18 +1,21 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {useSelector} from 'react-redux';
 import {fonts} from '../../constants';
 import GoalCard from '../atoms/GoalCard';
 import CardContainer from '../molecules/CardContainer';
 
 const SavingsCard = () => {
-  const [Name, setName] = useState("Andy's");
+  const {firstName} = useSelector(state => state.save);
   return (
     <CardContainer
       style={{
         backgroundColor: 'rgba(245, 247, 251, 1)',
         borderColor: 'rgba(0, 0, 0, 0.08)',
       }}
-      label={`${Name}` + `${' '}` + 'Savings'}
+      label={
+        `${firstName ? `${firstName + "'s"}` : "Andy's"}` + `${' '}` + 'Savings'
+      }
       labelFontStyle={{color: 'rgba(17, 40, 84, 1)'}}
       buttonLabel="Add and view goals"
       ButtonLabelStyle={{color: 'rgba(87, 112, 164, 0.9)'}}

@@ -9,3 +9,5 @@ export const arrow = require('./arrow.png');
 export const FoodIcon = require('./FoodIcon.png');
 export const DocumentIcon = require('./DocumentIcon.png');
 export const CreditedIcon = require('./CreditedIcon.png');
+export const LandScape = require('./landscape.png');
+export const settings = require('./settings.png');

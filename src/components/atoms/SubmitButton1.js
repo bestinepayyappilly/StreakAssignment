@@ -2,17 +2,17 @@ import React from 'react';
 import {StyleSheet, Text, View, Pressable} from 'react-native';
 import {colors, fonts} from '../../constants';
 
-const SubmitButton1 = () => {
+const SubmitButton1 = ({onPress}) => {
   return (
     <View
       style={{
         flex: 1,
-
         justifyContent: 'flex-end',
-        marginBottom: 36,
+
         paddingHorizontal: 22,
       }}>
       <Pressable
+        onPress={onPress}
         style={{
           height: 56,
           width: '100%',

@@ -12,6 +12,8 @@ import {
 import {Header1, Hairline, CrossButton, SubmitButton1} from '../../components';
 import TextInput1 from '../../components/molecules/TextInput1';
 import {colors, fonts} from '../../constants';
+import {useDispatch} from 'react-redux';
+import {SAVE_INFO} from '../../_Redux/constants';
 
 const {height, width} = Dimensions.get('screen');
 const windowHeight = Dimensions.get('window').height;
@@ -22,9 +24,27 @@ const index = ({navigation}) => {
   const [secondName, setSecondName] = useState(null);
   const [email, setEmail] = useState(null);
   const [number, setNumber] = useState(null);
+  const dispatch = useDispatch();
+  const SaveInputs = () => {
+    if (firstName && secondName && email && number) {
+      dispatch({
+        type: SAVE_INFO,
+        payload: {
+          firstName: firstName,
+          secondName: secondName,
+          email: email,
+          number: number,
+        },
+      });
+      navigation.navigate('DashBoard');
+    } else {
+      alert('Please fill all inputs');
+    }
+  };
 
   return (
     <View style={styles.container}>
+      <StatusBar translucent backgroundColor="transparent" />
       <ScrollView
         style={styles.scrollViewContainer}
         showsVerticalScrollIndicator={false}>
@@ -50,9 +70,28 @@ const index = ({navigation}) => {
               setFirstName(text);
             }}
           />
-          <TextInput1 label="Second Name" />
-          <TextInput1 label="Email" />
-          <TextInput1 label="Mobile Number" keyboardType="numeric" />
+          <TextInput1
+            label="Second Name"
+            value={secondName}
+            onChangeText={text => {
+              setSecondName(text);
+            }}
+          />
+          <TextInput1
+            value={email}
+            label="Email"
+            onChangeText={text => {
+              setEmail(text);
+            }}
+          />
+          <TextInput1
+            value={number}
+            label="Mobile Number"
+            keyboardType="numeric"
+            onChangeText={text => {
+              setNumber(text);
+            }}
+          />
         </View>
         <View style={{marginTop: 8, alignItems: 'center'}}>
           <Text
@@ -65,7 +104,7 @@ const index = ({navigation}) => {
           </Text>
         </View>
       </ScrollView>
-      <SubmitButton1 />
+      <SubmitButton1 onPress={SaveInputs} />
     </View>
   );
 };
@@ -76,10 +115,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
+    paddingBottom: 16,
   },
   scrollViewContainer: {
     marginTop: StatusBar.currentHeight,
-    height: height - 86,
+    height: height,
     width: width,
     backgroundColor: colors.white,
   },
