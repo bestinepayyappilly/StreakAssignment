@@ -8,7 +8,6 @@ const SubmitButton1 = ({onPress}) => {
       style={{
         flex: 1,
         justifyContent: 'flex-end',
-
         paddingHorizontal: 22,
       }}>
       <Pressable

@@ -122,6 +122,7 @@ const styles = StyleSheet.create({
     height: height,
     width: width,
     backgroundColor: colors.white,
+    marginBottom: 50,
   },
   instructionStyle: {
     color: colors.GreyLight,

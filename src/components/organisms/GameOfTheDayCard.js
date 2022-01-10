@@ -1,6 +1,12 @@
 import {LinearGradient} from 'expo-linear-gradient';
 import React, {useState, useRef} from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {
+  ActivityIndicator,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import {colors, fonts} from '../../constants';
 import CardContainer from '../molecules/CardContainer';
@@ -8,12 +14,13 @@ import axios from 'axios';
 
 const GameOfTheDayCard = () => {
   const [number, setNumber] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  if (!number) {
-    null;
-  } else {
-    const [x, y, z, w] = number;
-  }
+  // if (!number) {
+  //   null;
+  // } else {
+  //   const [x, y, z, w] = number;
+  // }
   const getNumbers = async () => {
     await axios
       .get(
@@ -21,7 +28,9 @@ const GameOfTheDayCard = () => {
       )
       .then(res => {
         setNumber(res.data.numbers);
+        setLoading(false);
       })
+
       .catch(e => {
         console.log(e);
       });
@@ -138,7 +147,9 @@ const GameOfTheDayCard = () => {
             Win prizes worth ₹4000 or more.
           </Text>
           <Pressable
-            onPress={getNumbers}
+            onPress={() => {
+              getNumbers(), setLoading(true);
+            }}
             style={{
               marginTop: 20,
               flex: 1,
@@ -146,6 +157,9 @@ const GameOfTheDayCard = () => {
               backgroundColor: 'rgba(171, 96, 79, 1)',
               borderRadius: 28.5,
               paddingHorizontal: 20,
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-around',
             }}>
             <Text
               style={{
@@ -153,9 +167,11 @@ const GameOfTheDayCard = () => {
                 fontSize: 18,
                 fontFamily: fonts.Barlow_SemiBold,
                 lineHeight: 21.6,
+                marginHorizontal: 10,
               }}>
               Try your luck
             </Text>
+            {loading ? <ActivityIndicator size="small" color="#fff" /> : null}
           </Pressable>
         </View>
       </View>

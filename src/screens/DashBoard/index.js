@@ -44,7 +44,7 @@ const index = () => {
     Animated.timing(translateY, {
       toValue: 0,
       delay: 1500,
-      duration: 300,
+      duration: 500,
       useNativeDriver: false,
     }).start();
   }, []);
