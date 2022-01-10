@@ -62,7 +62,12 @@ const index = () => {
           blurRadius={7}
           style={{height: '100%', width: '100%'}}>
           <View style={styles.logoContainer}>
-            <Image source={Logo1} style={{height: 41, width: 39}} />
+            <Image
+              transition={false}
+              placeholderStyle={{backgroundColor: 'transparent'}}
+              source={Logo1}
+              style={{height: 41, width: 39, backgroundColor: 'transparent'}}
+            />
             <Pressable>
               <View
                 style={{
@@ -70,6 +75,7 @@ const index = () => {
                   justifyContent: 'center',
                   flex: 1,
                   elevation: 5,
+                  backgroundColor: 'transparent',
                 }}>
                 <Shadow
                   inner
@@ -90,10 +96,13 @@ const index = () => {
                   }}>
                   <Image
                     source={Avatar}
+                    transition={false}
+                    placeholderStyle={{backgroundColor: 'transparent'}}
                     style={{
                       height: 29,
                       width: 29,
                       borderRadius: 15,
+                      backgroundColor: 'transparent',
                     }}
                   />
 
