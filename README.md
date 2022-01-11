@@ -16,7 +16,7 @@ npm install or yarn
 npx react-native run-android or react-native run-android(yarn)
 ```
 
-<img src="https://github.com/bestinepayyappilly/StreakAssignment/blob/main/src/assets/ScreenRecord.gif" width="400" height="800" />
+<img src="https://github.com/bestinepayyappilly/StreakAssignment/blob/main/src/assets/ScreenRecord2.gif" width="400" height="800" />
 
 - ScreenShots can be found here : <https://github.com/bestinepayyappilly/StreakAssignment/tree/main/src/assets/ScreenShots/>
 
