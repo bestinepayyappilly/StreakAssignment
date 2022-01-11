@@ -82,6 +82,7 @@ const GameOfTheDayCard = () => {
             {number.map((e, i) => {
               return (
                 <View
+                  key={e}
                   style={{
                     borderWidth: 6,
                     borderRadius: 7.19,
